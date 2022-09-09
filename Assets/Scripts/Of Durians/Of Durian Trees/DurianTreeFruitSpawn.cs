@@ -23,11 +23,12 @@ public class DurianTreeFruitSpawn : MonoBehaviour
     [SerializeField] private float x,y,z;
 
     public DurianFruitPool durianPool;
-
+    public Transform durianTreeParentTransform;
     
     // Start is called before the first frame update
     void Start()
     {
+        durianTreeParentTransform = gameObject.transform;
         //Get Durian Pool
         if(durianPool == null)
         {
@@ -39,9 +40,9 @@ public class DurianTreeFruitSpawn : MonoBehaviour
         spawnPlaces = new GameObject[spawnPointsAmount];
         for(int i = 0; i < spawnPointsAmount; i++)
         {
-            x = Random.Range(x1,x2);
-            y = Random.Range(y1,y2);
-            z = Random.Range(z1,z2);
+            x = Random.Range(x1,x2) + durianTreeParentTransform.position.x;
+            y = Random.Range(y1,y2) + durianTreeParentTransform.position.y;
+            z = Random.Range(z1,z2) + durianTreeParentTransform.position.z;
             spawnPositions[i] = new Vector3(x,y,z);
         }
         for(int i = 0; i < spawnPointsAmount; i++)

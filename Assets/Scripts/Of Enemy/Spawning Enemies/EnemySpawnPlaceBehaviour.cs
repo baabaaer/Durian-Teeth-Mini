@@ -46,7 +46,7 @@ public class EnemySpawnPlaceBehaviour : MonoBehaviour
         spawnValue = Random.Range(0.0f, 100.0f);
         if (spawnValue < spawnChance)
         {
-            theEnemy = enemyPool.GetDurians();
+            theEnemy = enemyPool.GetEnemies();
             theEnemy.transform.SetParent(transform, false);
 
             timer = 0f;

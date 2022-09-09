@@ -12,7 +12,7 @@ public class EnemyPool : MonoBehaviour
     void Awake()
     {
         enemyPool = new ObjectPool<GameObject>(
-            CreateDurianPool,
+            CreateEnemyPool,
             enemy => { enemy.SetActive(true); },
             enemy => { enemy.SetActive(false); },
             enemy => { Destroy(enemy); },
@@ -21,19 +21,19 @@ public class EnemyPool : MonoBehaviour
 
     }
 
-    GameObject CreateDurianPool()
+    GameObject CreateEnemyPool()
     {
         enemyOut = Instantiate(enemy, Vector3.zero, Quaternion.identity);
         return enemyOut;
     }
 
-    public GameObject GetDurians()
+    public GameObject GetEnemies()
     {
         enemyOut = enemyPool.Get();
         return enemyOut;
     }
 
-    public void ReleaseDurians(GameObject durianOut)
+    public void ReleaseEnemies(GameObject enemiesOut)
     {
         enemyPool.Release(enemyOut);
     }

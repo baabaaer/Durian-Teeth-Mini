@@ -55,7 +55,7 @@ MonoBehaviour:
   durianFruit: {fileID: 4180757870691752348, guid: 53b29d9cd5a3ec84c8399dc4d69ef64a,
     type: 3}
   minSpawnPointsAmount: 5
-  maxSpawnPointsAmount: 10
+  maxSpawnPointsAmount: 7
   spawnPointsAmount: 0
   x1: 10
   x2: -10
@@ -67,6 +67,7 @@ MonoBehaviour:
   y: 0
   z: 0
   durianPool: {fileID: 0}
+  durianTreeParentTransform: {fileID: 0}
 --- !u!114 &9002903434911713485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 0
-  totalTreeHealth: 40000
+  totalTreeHealth: 4000
 --- !u!54 &9002903434911713474
 Rigidbody:
   m_ObjectHideFlags: 0

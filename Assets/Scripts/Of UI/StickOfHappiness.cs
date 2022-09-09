@@ -29,7 +29,7 @@ public class StickOfHappiness : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             pos.y = (pos.y / background.rectTransform.sizeDelta.y);
 
             inputVector = new Vector3(pos.x, 0, pos.y);
-            inputVector = (inputVector.magnitude > 0.5f) ? inputVector.normalized : inputVector;
+            inputVector = (inputVector.magnitude > 0.3f) ? inputVector.normalized : inputVector;
 
 
             //Debug.Log(pos);

@@ -6,7 +6,7 @@ public class PlayerShoot : MonoBehaviour
 {
     public StickOfHappiness cameraJoyStick;
     public Vector2 direction;
-    [Range(0f,100f)] public float throwingPower;
+    [Range(0f,300f)] public float throwingPower;
     
     public GameObject wakid;
     public GameObject durianLaunchPoint;
@@ -26,11 +26,11 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        direction.x = cameraJoyStick.Horizontal();
-        direction.y = cameraJoyStick.Vertical();
+        //direction.x = cameraJoyStick.Horizontal();
+        //direction.y = cameraJoyStick.Vertical();
 
         //How do I make the wakid move up down with camera joystick?
-        wakid.transform.rotation = Quaternion.Euler(wakid.transform.rotation.eulerAngles + new Vector3(-direction.y, 0, 0));
+        //wakid.transform.rotation = Quaternion.Euler(wakid.transform.rotation.eulerAngles + new Vector3(-direction.y, 0, 0));
     }
 
     public void ShootTheDurian()

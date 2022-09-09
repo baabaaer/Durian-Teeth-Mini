@@ -32,7 +32,7 @@ public class GroundEnemySpawn : MonoBehaviour
         x2Permitted = x4 - x3;
         z1Permitted = z1 - z2;
         z2Permitted = z4 - z3;
-        //Get Durian Pool
+        //Get Enemy Pool
         if (enemyPool == null)
         {
             enemyPool = GameObject.FindGameObjectWithTag("Enemy Pool").GetComponent<EnemyPool>();
@@ -76,7 +76,7 @@ public class GroundEnemySpawn : MonoBehaviour
         }
         for (int i = 0; i < spawnPointsAmount; i++)
         {
-            GameObject theEnemy = enemyPool.GetDurians();
+            GameObject theEnemy = enemyPool.GetEnemies();
             theEnemy.transform.SetParent(enemySpawnPlaces[i].transform, false);
         }
     }

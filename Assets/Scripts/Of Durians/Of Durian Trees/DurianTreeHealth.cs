@@ -30,7 +30,6 @@ public class DurianTreeHealth : MonoBehaviour
         if(treeHealth < 0)
         {
             Destroy(gameObject);
-            SceneManager.LoadScene("LoseScene");
         }
     }
 }

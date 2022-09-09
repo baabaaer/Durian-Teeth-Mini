@@ -50,10 +50,10 @@ MonoBehaviour:
   powerAmount: 40
   durianPoolGameObject: {fileID: 0}
   durianFruitPool: {fileID: 0}
-  minFallTime: 10
-  maxFallTime: 20
-  minLifeSpan: 180
-  maxLifeSpan: 300
+  minFallTime: 15
+  maxFallTime: 300
+  minLifeSpan: 2500
+  maxLifeSpan: 3000
   freeDurians: {fileID: 0}
   durianRb: {fileID: 0}
   pickable: 0
